@@ -1,0 +1,41 @@
+.upcomingSchedule {
+  /* Inherits 'card' styles */
+  padding: 25px; /* Adjust padding */
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-color-dark);
+}
+
+.daySection {
+  margin-bottom: 20px;
+}
+
+.dayHeader {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color-dark);
+  margin-bottom: 15px;
+}
+
+.appointmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Spacing between appointment cards */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .upcomingSchedule {
+    padding: 20px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .dayHeader {
+    font-size: 15px;
+  }
+}

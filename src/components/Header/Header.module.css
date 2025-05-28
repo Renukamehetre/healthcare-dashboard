@@ -1,0 +1,129 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* Adjust padding as needed for spacing */
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color); /* Subtle line if needed */
+  position: sticky; /* Make it sticky */
+  top: 0;
+  z-index: 100;
+  /* Add border-radius-card to the top if the main container is rounded */
+  border-top-right-radius: var(--border-radius-card);
+  padding-right: 30px; /* Adjust based on App.module.css main content padding */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-right: 30px; /* Space between logo and search */
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f0f4f7; /* Lighter background for search */
+  border-radius: var(--border-radius-sm);
+  padding: 8px 15px;
+  flex-grow: 0.7; /* Allow it to grow, but not too much */
+  max-width: 400px; /* Limit search bar width */
+}
+
+.searchIcon {
+  color: var(--text-color-light);
+  margin-right: 10px;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: var(--text-color-dark);
+  flex-grow: 1;
+}
+
+.searchInput::placeholder {
+  color: var(--text-color-light);
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Spacing between icons and profile */
+}
+
+.icon, .addIcon {
+  font-size: 24px; /* Adjust icon size */
+  color: var(--text-color-light);
+  cursor: pointer;
+}
+
+.addIcon {
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0f4f7; /* Light background for user profile */
+  padding: 5px 15px;
+  border-radius: var(--border-radius-sm);
+}
+
+.userAvatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userName {
+  font-weight: 500;
+  color: var(--text-color-dark);
+}
+
+/* --- Responsiveness for Header --- */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 15px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo {
+    font-size: 20px;
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .searchBar {
+    width: 90%;
+    max-width: none;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+
+  .userActions {
+    width: 90%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .userProfile {
+    padding: 5px 10px;
+  }
+}

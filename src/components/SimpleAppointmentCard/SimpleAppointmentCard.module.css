@@ -1,0 +1,30 @@
+.appointmentCard {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 18px;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-color-dark); /* Default text color, adjust if needed */
+  box-shadow: var(--shadow-light); /* Optional subtle shadow for cards */
+}
+
+.icon {
+  font-size: 24px; /* Adjust icon size */
+  flex-shrink: 0;
+}
+
+.details {
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 3px 0;
+}
+
+.time {
+  font-size: 13px;
+  color: var(--text-color-light); /* Or adjust to a color that contrasts with card background */
+  margin: 0;
+}

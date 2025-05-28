@@ -1,0 +1,68 @@
+/* You'll need to define custom properties for colors, fonts, etc. */
+:root {
+  --primary-blue: #007bff; /* Example, adjust to image */
+  --sidebar-bg: #ffffff;
+  --header-bg: #ffffff;
+  --body-bg: #f5f7fa; /* The very light gray background */
+  --text-color-dark: #333;
+  --text-color-light: #666;
+  --border-color: #eee;
+  --card-bg: #ffffff;
+  --shadow-light: 0 4px 8px rgba(0, 0, 0, 0.05);
+  --border-radius-card: 15px;
+  --border-radius-sm: 8px;
+
+  /* Specific colors from the image */
+  --healthy-green: #2ecc71;
+  --issue-red: #e74c3c;
+  --calendar-blue-dark: #3498db;
+  --calendar-blue-light: #e0f2f7;
+  --calendar-purple-light: #e8e0f7;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Adjust font based on image */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--body-bg);
+  color: var(--text-color-dark);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+  /* Use border-radius here if you want the whole app to have rounded corners like the image */
+  border-radius: var(--border-radius-card);
+  overflow: hidden; /* To ensure content respects the root's border-radius */
+  box-shadow: var(--shadow-light); /* Or a larger shadow for the entire app container */
+}
+
+/* Base styles for cards */
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-light);
+  padding: 20px;
+}
+
+/* Utility classes for text colors */
+.text-light {
+  color: var(--text-color-light);
+}
+
+/* Icons - you'd replace these with actual icon library imports or SVGs */
+.icon {
+  display: inline-block;
+  width: 20px; /* Adjust size */
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+/* Example icon definitions (you'd use actual SVGs/images or icon library components) */
+.icon-dashboard { background-image: url('../assets/icons/dashboard.svg'); }
+.icon-search { background-image: url('../assets/icons/search.svg'); }
+/* ... and so on for all icons */

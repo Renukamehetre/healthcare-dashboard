@@ -1,0 +1,35 @@
+.appContainer {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  background-color: var(--body-bg); /* Background for the overall app */
+  border-radius: var(--border-radius-card); /* Rounded corners for the entire app container */
+  overflow: hidden; /* Ensures content respects the border-radius */
+  box-shadow: var(--shadow-light); /* Subtle shadow for the app container */
+  margin: 20px; /* Add some margin around the whole app to show the body background */
+  width: calc(100vw - 40px); /* Adjust width to fit margin */
+}
+
+.mainContentWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Allow scrolling for the main content area */
+  padding: 0 30px 30px 30px; /* Adjust padding for header, main content, and bottom */
+}
+
+/* --- Responsiveness for App Container --- */
+@media (max-width: 1200px) {
+  .appContainer {
+    flex-direction: column;
+    margin: 10px;
+    width: calc(100vw - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .appContainer {
+    margin: 0;
+    width: 100vw;
+    border-radius: 0;
+  }
+}

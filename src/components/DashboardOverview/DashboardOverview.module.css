@@ -1,0 +1,18 @@
+.dashboardOverview {
+  /* Inherits 'card' styles from global.css or App.module.css */
+  padding: 25px; /* Adjust padding */
+}
+
+.anatomyAndStatus {
+  display: flex;
+  gap: 20px; /* Spacing between anatomy and health status cards */
+  align-items: flex-start; /* Align top */
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .anatomyAndStatus {
+    flex-direction: column; /* Stack anatomy and status cards */
+    align-items: center;
+  }
+}

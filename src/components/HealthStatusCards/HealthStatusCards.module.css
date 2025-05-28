@@ -1,0 +1,79 @@
+.healthStatusCards {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between individual status cards */
+}
+
+.statusCard {
+  /* Inherits 'card' styles */
+  padding: 15px 20px;
+  min-width: 200px; /* Ensure cards have a decent minimum width */
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cardIcon {
+  font-size: 28px; /* Adjust icon size */
+  margin-right: 10px;
+  color: var(--primary-blue); /* Or a specific color for the icon */
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.cardDate {
+  font-size: 13px;
+  color: var(--text-color-light);
+  margin-bottom: 10px;
+}
+
+.cardStatus {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--border-radius-sm);
+  display: inline-block; /* To make padding effective */
+}
+
+.cardStatus.healthy {
+  background-color: #e0f7e0; /* Light green background */
+  color: var(--healthy-green);
+}
+
+.cardStatus.issue {
+  background-color: #f7e0e0; /* Light red background */
+  color: var(--issue-red);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+  .healthStatusCards {
+    flex-direction: row; /* Layout cards in a row on tablet */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .statusCard {
+    min-width: 150px;
+    flex: 1 1 45%; /* Allow cards to grow/shrink and wrap */
+    max-width: 220px; /* Limit max width */
+  }
+}
+
+@media (max-width: 576px) {
+  .healthStatusCards {
+    flex-direction: column; /* Stack cards again on mobile */
+    align-items: center;
+  }
+  .statusCard {
+    width: 90%; /* Take more width on mobile */
+    max-width: 300px;
+  }
+}
